@@ -24,7 +24,7 @@
 /* Hero Style */
 .cta-btn--hero {
   @include supportColorForIE11();
-  border: 2px solid transparent;
+  // border: 2px solid transparent;
   border-image: linear-gradient(
     135deg,
     $primary-color 0%,
@@ -92,4 +92,24 @@
 /* Arrow Button */
 .up i {
   color: #272727;
+}
+
+
+
+.cta-btn--source-code {
+  @include supportColorForIE11();
+
+
+  &:hover {
+    -webkit-text-fill-color: $white-color;
+    text-decoration: none;
+
+    @include respond(phone) {
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
 }
